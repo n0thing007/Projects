@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@200;300;400;500;600&display=swap');
+:root{
+    --color-body: #b6cbce;
+    --color-heading: #eef3db;
+    --color-base: #033f47;
+    --color-base2: #022a30;
+    --color-brand: #e0f780;
+    --color-brand2: #deff58;
+    --sidbar-width: 240px;
+    --font-base: "Bai Jamjuree";
+}
+body{
+    background-color: var(--color-base2);
+    color: var(--color-body);/*text color*/
+    font-family: var(--font-base),sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+    color: var(--color-heading);
+    font-weight: 700;
+}
+a{
+    color: var(--color-body);
+    text-decoration: none;
+    transition: 0.4s ease;
+}
+img{
+    width: 100%;
+}
+.text-brand{
+    color: var(--color-brand);
+}
+.bg-base{
+    background-color: var(--color-base);
+}
+.full-height{
+    min-height: 100vh;
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.btn-brand{
+    background-color: var(--color-brand);
+    color: var(--color-base);
+    font-weight: 600;
+    padding: 0.7rem 1.7rem;
+}
+.btn-brand:hover{
+    background-color: var(--color-brand2);
+    color: var(--color-base2);
+}
+.link-custom{
+    position: relative;
+    font-weight: 700;
+    transition: 0.4s ;
+}
+.link-custom:hover{
+color: var(--color-brand);
+}
+.link-custom::after{
+    content: "";
+    width:0%;
+    height: 2px;
+    background-color: var(--color-brand);
+    position: absolute;
+    left: 0;
+    top: 110%;
+    transition: all 0.4s;
+}
+.link-custom:hover::after{
+    width: 100%;
+}
+.shadow-effect{
+    transition: 0.4s ease;
+}
+.shadow-effect:hover{
+    box-shadow: -6px 7px 0px 0px var(--color-brand);
+}
+@media (min-width:992px) {
+    .navbar{
+        min-height: 100vh;
+        width: var(--sidbar-width);
+        background:linear-gradient(rgba(0, 69, 78, 0.4),rgba(3, 63, 71, 0.8)),url("assets/images/sidebar-img.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+    .navbar-brand img{
+        border: 8px solid var(--color-brand);
+    }
+/*CONTENT WRAPPER*/
+    #content-wrapper{
+        padding-left: var(--sidbar-width);
+    }
+}
+.navbar {
+    background-color: var(--color-base);
+}
+.navbar .nav-link{
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+}
+.navbar .nav-link:hover{
+color: var(--color-brand);
+}
+.navbar .nav-link:active{
+    color: var(--color-brand);
+}
+.service{
+    background-color: var(--color-base);
+    height: 280px;
+}
+.icon-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 60px;
+    background-color:var(--color-brand2);
+    margin-bottom: 10px;
+}
+.icon-box i{
+    font-size: 25px;
+    color: black;
+}
+.work-card{
+    overflow: hidden;
+    background-color:var(--color-base);   
+}
+.card-img-top{
+    height: 320px;
+    transition: 0.4s ease;
+}
+.work-card:hover .card-img-top{
+  transform: scale(1.1);
+}
+.card-custom-img{
+    overflow: hidden;   
+}
+ .form-control {
+    background-color: var(--color-base);
+    border-color: var(--color-base);
+    color: var(--color-body);
+}
+
+#contact .form-control:focus {
+    border-color: var(--color-brand);
+    box-shadow: none;
+}
+
+ .form-control::placeholder {
+    color: var(--color-body);
+}
+
+#contact input.form-control {
+    height: 44px;
+}
+#contact button{
+    border: none;
+}
